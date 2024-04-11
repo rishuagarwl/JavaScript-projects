@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <h1>WEATHER app</h1>
+
+            <div class="tab-cont">
+                <p class="tab" data-userWeather>Your Weather</p>
+                <p class="tab" data-searchWeather>Search Weather</p>
+            </div>
+
+            <div class="weather-container">
+                <!--grant location container-->
+                <div class="sub-cont grant-location-cont">
+                    <img src="/assets/location.png" alt="location" width="80" height="80" loading="lazy">
+                    <p>Grant Location Access</p>
+                    <p>Allow Access To get Weather Information</p>
+                    <button class="btn" data-grantAccess>Grant Access</button>
+                </div>
+
+                <!--search form-->
+                <form class="search-cont" >
+                    <input placeholder ="Search for City..." data-searchInput>
+                    <button class="btn" type="submit">
+                        <img src="/assets/search.png" alt="searchIcon" width="20" height="20" loading="lazy">
+                    </button>
+                </form>
+
+                <!--loading container-->
+                <div class="sub-cont loading-cont">
+                    <img src="/assets/loading.gif" alt="loadingGif" width="150" height="150" >
+                    <p>Loading...</p>
+                </div>
+
+                <!--weather information display-->
+                <div class="sub-cont user-info-cont">
+                    
+                    <!--city name and their respective flag-->
+                    <div class="name">
+                        <p data-cityName></p>
+                        <img data-countryIcon>
+                    </div>
+
+                    <!--weather description-->
+                    <p data-weatherDesc></p>
+                    <!--weather icon-->
+                    <img data-weatherIcon>
+                    <!--temperature-->
+                    <p data-temp></p>
+
+                    <!--other detail parameters-->
+                    <div class="info-cont">
+
+                        <!--card1 -->
+                        <div class="card">
+                            <img src="/assets/wind.png" alt="wind">
+                            <p>Wind Speed</p>
+                            <p data-windSpeed></p>
+                        </div>
+
+                        <!--card2-->
+                        <div class="card">
+                            <img src="/assets/humidity.png" alt="humidity">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+
+                        <!--card3-->
+                        <div class="card">
+                            <img src="/assets/cloud.png" alt="cloud">
+                            <p>Cloud</p>
+                            <p data-cloud></p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
